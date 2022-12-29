@@ -48,6 +48,7 @@ Ytterligare en GET endpoint skall läggas till där det går att hämta ett spec
  
 
 Tänk på innan du startar: Ska din resurs kunna hantera bilder? Ska du i så fall använda bilder som finns online eller ska användaren kunna ladda upp bilder?
+
 <!-- 1.1 Level 1 and 2: Initiation.<br>
 1.2 Level 3 and 4: Intermediate.<br>
 1.3 Level 5: Advanced.<br>
