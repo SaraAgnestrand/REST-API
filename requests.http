@@ -1,3 +1,45 @@
+GET http://localhost:3000/api/players 
+content-type: application/json
+
+
+###
+POST http://localhost:3000/api/players
+content-type: application/json
+
+    {
+        "id": 3,
+        "side": "forehand",
+        "gender": "female",
+        "level": "beginner"
+    }
+
+###
+PUT http://localhost:3000/api/players/3 
+content-type: application/json
+
+    {
+
+        "id": 3,
+
+        "side": "forehand",
+
+        "gender": "female",
+
+        "level": "advanced"
+
+    }
+
+###
+
+DELETE http://localhost:3000/api/players/3
+content-type: application/json
+
+###
+
 GET http://localhost:3000/api/players/1 
 content-type: application/json
+
+###
+
+
 
