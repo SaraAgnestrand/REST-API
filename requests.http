@@ -7,36 +7,33 @@ POST http://localhost:3000/api/players
 content-type: application/json
 
     {
-        "id": 3,
-        "side": "forehand",
-        "gender": "female",
-        "level": "beginner"
-    }
+        "firstname": "Erik",
+        "lastname": "Johansson",
+        "side": "Forehand",
+        "gender": "Male",
+        "level": "Professional"
+     }
 
 ###
-PUT http://localhost:3000/api/players/3 
+PUT http://localhost:3000/api/players/8253bfbe-bae6-42df-a8b4-eb6f0b202c95 
 content-type: application/json
 
     {
-
-        "id": 3,
-
-        "side": "forehand",
-
-        "gender": "female",
-
-        "level": "advanced"
-
+        "firstname": "Erik",
+        "lastname": "Johansson",
+        "side": "Forehand",
+        "gender": "Male",
+        "level": "Advanced"
     }
 
 ###
 
-DELETE http://localhost:3000/api/players/3
+DELETE http://localhost:3000/api/players/472ea409-419c-400c-8e97-8f33e5858733
 content-type: application/json
 
 ###
 
-GET http://localhost:3000/api/players/1 
+GET http://localhost:3000/api/players/55206605-053f-4d85-a99f-b59ccba925de
 content-type: application/json
 
 ###
