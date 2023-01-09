@@ -6,7 +6,7 @@ Padel players REST-API
 <br>
 <br>
 Beskrivning:<br>
-Mindre rest-api, api innehåller data om padelspelare<br>
+Mindre rest-api, innehåller data om padelspelare<br>
 <br>
 Krav som är uppfyllda:<br>
 Kraven för VG <br>
