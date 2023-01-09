@@ -6,7 +6,7 @@ const fs = require('fs');
 app.use(express.json());
 app.use(cors());
 
-//GET.req for all
+//Get all players
 app.get("/api/players", (req, res) => {
 
     const data = fs.readFileSync('players.json');
@@ -19,8 +19,8 @@ app.get("/api/players", (req, res) => {
 
     }
 });
-
-// POST.req
+ 
+//Create new player
 app.post("/api/players", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);
@@ -38,7 +38,7 @@ app.post("/api/players", (req, res) => {
 
 });
 
-//PUT.req
+//Change player data
 app.put("/api/players/:id", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);
@@ -68,7 +68,7 @@ app.put("/api/players/:id", (req, res) => {
     }
 });
 
-//DELETE.req
+//Delete player
 app.delete("/api/players/:id", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);
@@ -89,7 +89,7 @@ app.delete("/api/players/:id", (req, res) => {
     }
 });
 
-//GET.req with id
+//Get specific player by id
 app.get("/api/players/:id", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);
