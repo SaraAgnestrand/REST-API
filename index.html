@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="client.js" defer></script>
     <link rel="stylesheet" href="main.css">
-    <title>Inlämning REST_API</title>
+    <title>Padel players</title>
 </head>
 
 <body>
@@ -17,9 +17,7 @@
         </div>
     </header>
     <main>
-        <!-- <button class="getPlayersBtn">See all members</button> -->
         <a href="#seeAll">See all members</a>
-        <!-- <button class="getAddnewPlayerForm">Add new</button> -->
         <a href="#addNew">Add new</a>
         <img src="assets/pexels-oliver-sjöström-1103829.jpg" alt="">
     
@@ -29,6 +27,7 @@
         </div>
             <a id="addNew">
                 <div class="changesForm">
+                    <p>Change form:</p>
                     <input class="inputField changeFirstName" type="text">
                     <input class="inputField changeLastName" type="text">
                     <input class="inputField changeSide" type="text">
@@ -38,11 +37,12 @@
                 </div>
             </a>
             <div class="formContainer">
+                <p class="newMemberPara">New member form:</p>
                 <input class="inputField inpFirstName" type="text" placeholder="First name">
                 <input class="inputField inpLastName" type="text" placeholder="Lastname">
                 <input class="inputField inpSide" type="text" placeholder="Forehand/Backhand">
                 <input class="inputField inpGender" type="text" placeholder="Female/Male">
-                <input class="inputField inpLevel" type="text" placeholder="Level"> <br>
+                <input class="inputField inpLevel" type="text" placeholder="Level">
                 <button class="addNewPlayerBtn">Add new member</button> 
             </div>
     </main>

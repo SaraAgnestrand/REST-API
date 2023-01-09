@@ -21,7 +21,7 @@ initSite();
 function initSite() {
    loadPlayers();
 }
-
+ 
 function loadPlayers() {
     fetch("http://localhost:3000/api/players")
    .then(function(response) {
@@ -32,7 +32,7 @@ function loadPlayers() {
     });
 }
 
-//getPlayersBtn.addEventListener(click,  printPlayers());
+//Function for printing out all players on the webpage
 function printPlayers(data) {
   players = data;
     for (const player of data) {
@@ -63,12 +63,13 @@ function printPlayers(data) {
         const showThisPlayerBtn =document.createElement("button");
         showThisPlayerBtn.innerHTML = "Show this player";
         playerDiv.appendChild(showThisPlayerBtn);
+        //Eventlisteners for the buttons created in the playerDiv
         changesBtn.addEventListener("click", () => makeChanges(player.id));
         deleteBtn.addEventListener("click", () => deletePlayer(player.id));
         showThisPlayerBtn.addEventListener("click", () => printPlayerById(player.id));
     }
 }
-
+//Eventlistener for addNewPlayerBtn and function for adding newPlayer/member
 addNewPlayerBtn.addEventListener("click", addNewMember);
 function addNewMember(){
 const player = {
@@ -94,7 +95,7 @@ fetch("http://localhost:3000/api/players", {
     console.error('Error:', error);
   });
 }
-
+//Function for making changes on one of the members 
 function makeChanges(id){
   changesForm.style.display = "inline";
   const player = players.find(player => player.id ===id);
@@ -109,10 +110,11 @@ function makeChanges(id){
   changeSide.value = player.side;
   changeGender.value = player.gender;
   changeLevel.value = player.level;
-
+//Eventlistener for clicking the save-button at the makingchanges-form
   saveBtn.addEventListener("click", () => saveChanges(id));
 }
 
+//Function for saving changes
 function saveChanges(id){
   const changeFirstName = document.querySelector(".changeFirstName");
   const changeLastName = document.querySelector(".changeLastName")
@@ -145,6 +147,7 @@ fetch(`http://localhost:3000/api/players/${id}`, {
 
 }
 
+//Function for deleteing one of the members/players
 function deletePlayer(id){
   fetch(`http://localhost:3000/api/players/${id}`, {
   method: 'DELETE', 
@@ -158,6 +161,7 @@ function deletePlayer(id){
   });
 }
 
+//Function for showing data on one of the players by id
 function printPlayerById(id){
   fetch(`http://localhost:3000/api/players/${id}`, {
     method: 'GET', 
@@ -168,6 +172,7 @@ function printPlayerById(id){
       console.log('Success:', player);
       playersContainer.style.display = "none";
       const onePlayerDiv =document.createElement("div");
+      onePlayerDiv.classList.add("onePlayerDiv");
       onePlayerContainer.appendChild(onePlayerDiv);
       const p1 = document.createElement("p");
       p1.innerText = "Namn: " + player.firstname + " " + player.lastname;
@@ -188,16 +193,16 @@ function printPlayerById(id){
       closeBtn.classList.add("closeBtn");
       closeBtn.innerText = "Close window";
       onePlayerDiv.appendChild(closeBtn);
-      closeBtn.addEventListener("click", goBackToAllPlayers);
+      closeBtn.addEventListener("click", returnToAllPlayers);
 
     })
     .catch((error) => {
       console.error('Error:', error);
     });
-  
   }
-
-  function goBackToAllPlayers(){
+  
+//Function for closing the data-window with one player and returning to seeing all the players on the page
+  function returnToAllPlayers(){
     playersContainer.style.display = "flex";
     onePlayerContainer.innerHTML = '';
   }

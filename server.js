@@ -6,7 +6,7 @@ const fs = require('fs');
 app.use(express.json());
 app.use(cors());
 
-//Get.anrop alla
+//GET.req for all
 app.get("/api/players", (req, res) => {
 
     const data = fs.readFileSync('players.json');
@@ -20,7 +20,7 @@ app.get("/api/players", (req, res) => {
     }
 });
 
-// Post.anrop
+// POST.req
 app.post("/api/players", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);
@@ -38,7 +38,7 @@ app.post("/api/players", (req, res) => {
 
 });
 
-//Put.anrop
+//PUT.req
 app.put("/api/players/:id", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);
@@ -50,6 +50,8 @@ app.put("/api/players/:id", (req, res) => {
 
     const existingPlayer = players.find(player => player.id === req.params.id);
     if (existingPlayer) {
+        existingPlayer.firstname = player.firstname;
+        existingPlayer.lastname = player.lastname;
         existingPlayer.side = player.side;
         existingPlayer.gender = player.gender;
         existingPlayer.level = player.level;
@@ -66,27 +68,7 @@ app.put("/api/players/:id", (req, res) => {
     }
 });
 
-//DELETE-anrop
-
-// app.delete("/api/players/:id", (req, res) => {
-//     const data = fs.readFileSync("players.json");
-//     const players = JSON.parse(data);
-//     const existingPlayer = players.find(player => player.id === parseInt(req.params.id));
-//     const index = players.indexOf(existingPlayer);
-//     if (players.find(player => player.id === parseInt(req.params.id))) {
-//     players.splice(index, 1);
-//     fs.writeFile("players.json", JSON.stringify(players, null, 2), function(err){
-//         if (err) {
-//             res.status(500).send();
-//         } else {
-//             res.status(200).send("Player deleted");
-//         }
-//     });
-//     } else {
-//         res.status(404).send('The player with the given ID was not found.');
-//     }
-// });
-//Delete.anrop
+//DELETE.req
 app.delete("/api/players/:id", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);
@@ -106,7 +88,8 @@ app.delete("/api/players/:id", (req, res) => {
         res.status(404).send('The player with the given ID was not found.');
     }
 });
-//Get.anrop för spelare med specifikt id 
+
+//GET.req with id
 app.get("/api/players/:id", (req, res) => {
     const data = fs.readFileSync("players.json");
     const players = JSON.parse(data);

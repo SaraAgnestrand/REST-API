@@ -15,7 +15,7 @@ content-type: application/json
      }
 
 ###
-PUT http://localhost:3000/api/players/8253bfbe-bae6-42df-a8b4-eb6f0b202c95 
+PUT http://localhost:3000/api/players/472ea409-419c-400c-8e97-8f33e5858733 
 content-type: application/json
 
     {
@@ -28,12 +28,12 @@ content-type: application/json
 
 ###
 
-DELETE http://localhost:3000/api/players/bae21a8d-1487-42e1-bd80-99d728846807
+DELETE http://localhost:3000/api/players/54a4e80e-539b-4248-99d9-c5a4eed94c7a
 content-type: application/json
 
 ###
 
-GET http://localhost:3000/api/players/8253bfbe-bae6-42df-a8b4-eb6f0b202c95
+GET http://localhost:3000/api/players/3f8cca98-dd2a-4875-abe9-03b8119090b1
 content-type: application/json
 
 ###

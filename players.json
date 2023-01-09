@@ -2,17 +2,17 @@
   {
     "firstname": "Jenny",
     "lastname": "Larsson",
-    "side": "Forehand",
+    "side": "Backhand",
     "gender": "Female",
     "level": "Intermediate",
     "id": "3f8cca98-dd2a-4875-abe9-03b8119090b1"
   },
   {
     "firstname": "Jon",
-    "lastname": "Jonasson",
-    "side": "Forehand",
+    "lastname": "Sjöö",
+    "side": "Backhand",
     "gender": "Male",
-    "level": "Advanced",
+    "level": "Intermediate",
     "id": "472ea409-419c-400c-8e97-8f33e5858733"
   },
   {
@@ -24,11 +24,11 @@
     "id": "8253bfbe-bae6-42df-a8b4-eb6f0b202c95"
   },
   {
-    "firstname": "Julia ",
-    "lastname": "Joss",
+    "firstname": "Kalle",
+    "lastname": "Svensson",
     "side": "Forehand",
-    "gender": "Female",
-    "level": "Advanced",
-    "id": "3d19fcfc-bbce-42a2-b5ce-446a8e807b3b"
+    "gender": "Male",
+    "level": "Professional",
+    "id": "54a4e80e-539b-4248-99d9-c5a4eed94c7a"
   }
 ]
