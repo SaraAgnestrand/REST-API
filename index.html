@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +9,44 @@
     <link rel="stylesheet" href="main.css">
     <title>Inlämning REST_API</title>
 </head>
+
 <body>
     <header>
         <div>
-            <h1>Padel Players</h1>
+            <h1>PADEL PLAYERS CLUB</h1>
         </div>
     </header>
     <main>
-        <div>
-                <button class="getPlayersBtn">See all members</button>
-                <button class="addNewPlayerBtn">Add new member</button> <br>
-                <div class="formContainer">
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Lastname">
-                    <input type="text" placeholder="Forehand/Backhand">
-                    <input type="text" placeholder="Female/Male">
-                    <input type="text" placeholder="Level">
-                </div>
-        </div>        
-        <div class="playersContainer">
-                <!-- <button class="getPlayerByIdBtn"></button> -->
-                <!-- <button class="deletePlayerBtn">Radera</button> -->
-                <!-- <button class="submitChangesBtn">Bekräfta ändring</button> -->
+        <!-- <button class="getPlayersBtn">See all members</button> -->
+        <a href="#seeAll">See all members</a>
+        <!-- <button class="getAddnewPlayerForm">Add new</button> -->
+        <a href="#addNew">Add new</a>
+        <img src="assets/pexels-oliver-sjöström-1103829.jpg" alt="">
+    
+        <div  id="seeAll" class="playersContainer">
         </div>
-        
-                
-            
-
-        
+        <div class="onePlayerContainer">
+        </div>
+            <a id="addNew">
+                <div class="changesForm">
+                    <input class="inputField changeFirstName" type="text">
+                    <input class="inputField changeLastName" type="text">
+                    <input class="inputField changeSide" type="text">
+                    <input class="inputField changeGender" type="text">
+                    <input class="inputField changeLevel" type="text">
+                    <button class="saveBtn">Save</button>
+                </div>
+            </a>
+            <div class="formContainer">
+                <input class="inputField inpFirstName" type="text" placeholder="First name">
+                <input class="inputField inpLastName" type="text" placeholder="Lastname">
+                <input class="inputField inpSide" type="text" placeholder="Forehand/Backhand">
+                <input class="inputField inpGender" type="text" placeholder="Female/Male">
+                <input class="inputField inpLevel" type="text" placeholder="Level"> <br>
+                <button class="addNewPlayerBtn">Add new member</button> 
+            </div>
     </main>
+    <footer></footer>
 </body>
+
 </html>
