@@ -1,18 +1,23 @@
 # REST-API
 Inlämningsuppgift 
 
-Titel:
+Titel:<br>
+Padel players REST-API
 <br>
-Beskrivning:
 <br>
-Krav som är uppfyllda:Kraven för VG
+Beskrivning:<br>
+Mindre rest-api, api innehåller data om padelspelare<br>
 <br>
-Info om hur projektet byggs och körs:
+Krav som är uppfyllda:<br>
+Kraven för VG <br>
 <br>
-
-
-<!-- 1.1 Level 1 and 2: Initiation.<br>
-1.2 Level 3 and 4: Intermediate.<br>
-1.3 Level 5: Advanced.<br>
-1.4 Level 6 and 7: Professional.<br>
--->
+Info om hur projektet byggs och körs:<br>
+npm install <br>
+nodemon server.js <br>
+<br>
+<br>
+Levels för spelare:<br>
+Level 1 and 2: Initiation.<br>
+Level 3 and 4: Intermediate.<br>
+Level 5: Advanced.<br>
+Level 6 and 7: Professional.<br>
